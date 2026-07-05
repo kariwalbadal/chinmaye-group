@@ -32,6 +32,14 @@ window.addEventListener('scroll', onScroll, { passive: true });
 /* ---------- hero entrance ---------- */
 requestAnimationFrame(() => document.body.classList.add('loaded'));
 
+/* deferred hero slides (kept out of the critical path for LCP) */
+window.addEventListener('load', () => {
+  document.querySelectorAll('.hero-slide[data-src]').forEach((img) => {
+    img.src = img.dataset.src;
+    img.removeAttribute('data-src');
+  });
+});
+
 /* ---------- full-screen menu ---------- */
 const menuToggle = document.querySelector('.menu-toggle');
 const menuOverlay = document.getElementById('menu-overlay');
