@@ -18,8 +18,8 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+  <link rel="apple-touch-icon" href="assets/favicon-180.png">
   <meta name="theme-color" content="#26222A">
 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -210,7 +210,7 @@ a { color: inherit; }
 }
 
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; margin-right: auto; }
-.brand-mark { width: 26px; height: 26px; color: var(--gold); flex: none; }
+.brand-mark { width: 30px; height: 30px; flex: none; }
 .brand-name {
   font-family: var(--sans); font-weight: 400; font-size: .95rem;
   letter-spacing: .3em; text-transform: uppercase; white-space: nowrap;
@@ -329,6 +329,7 @@ body.menu-open { overflow: hidden; }
 .booking-modal::backdrop { background: rgba(38, 34, 42, .72); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
 .bm-inner { position: relative; padding: clamp(26px, 5vw, 40px); display: flex; flex-direction: column; gap: 18px; }
 .bm-inner h2 { font-size: clamp(1.5rem, 5.4vw, 2rem); margin: 0; }
+.bm-mark { width: 40px; height: 40px; }
 .bm-inner .chapter-no { margin: 0; }
 
 .bm-close {
@@ -725,7 +726,7 @@ body.menu-open { overflow: hidden; }
   <!-- ======================= HEADER ======================= -->
   <header class="site-header" id="top">
     <a class="brand" href="#top" aria-label="Chinmaye Inn — home">
-      <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5 43 24 24 43 5 24Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M24 15 33 24 24 33 15 24Z" fill="currentColor"/></svg>
+      <img class="brand-mark" src="assets/mark-dark.webp" alt="" width="30" height="30" decoding="async">
       <span class="brand-name">Chinmaye <em>Inn</em></span>
     </a>
     <nav class="main-nav" aria-label="Primary">
@@ -1051,6 +1052,7 @@ body.menu-open { overflow: hidden; }
   <dialog class="booking-modal" id="booking-modal" aria-labelledby="bm-title">
     <form method="dialog" class="bm-inner" id="booking-form">
       <button class="bm-close" value="cancel" formnovalidate aria-label="Close">×</button>
+      <img class="bm-mark" src="assets/mark.webp" alt="" width="40" height="40" decoding="async">
       <p class="chapter-no">Enquiry</p>
       <h2 id="bm-title">Bas ek message,<br><em>baaki hum dekh lenge.</em></h2>
 
