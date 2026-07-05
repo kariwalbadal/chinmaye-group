@@ -25,6 +25,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/fraunces/v38/6NU78FyLNQOQZAnv9bYEvDiIdE9Ea92uemAk_WBq8U_9v0c2Wa0KxC9TeP2Xz5c.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/jost/v20/92zatBhPNqw73oTd4jQmfxI.woff2">
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;0,9..144,540;1,9..144,380&family=Jost:wght@300;400;500&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;0,9..144,540;1,9..144,380&family=Jost:wght@300;400;500&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;0,9..144,540;1,9..144,380&family=Jost:wght@300;400;500&display=swap"></noscript>
@@ -334,7 +336,8 @@ body.menu-open { overflow: hidden; }
 }
 .hero-slides, .hero-slides img { position: absolute; inset: 0; width: 100%; height: 100%; }
 .hero-slide { object-fit: cover; opacity: 0; filter: saturate(.92) sepia(.08); }
-.hero-slide.s1 { animation: heroCycle 24s infinite; }
+/* s1 starts visible so the full-bleed image is the LCP, not a late text repaint */
+.hero-slide.s1 { animation: heroCycleFirst 24s infinite; }
 .hero-slide.s2 { animation: heroCycle 24s 8s infinite; }
 .hero-slide.s3 { animation: heroCycle 24s 16s infinite; }
 
@@ -343,6 +346,13 @@ body.menu-open { overflow: hidden; }
   4%,33%  { opacity: 1; }
   42%,100%{ opacity: 0; }
   50%     { transform: scale(1.08); }
+}
+@keyframes heroCycleFirst {
+  0%      { opacity: 1; transform: scale(1); }
+  33%     { opacity: 1; }
+  42%,92% { opacity: 0; }
+  50%     { transform: scale(1.08); }
+  100%    { opacity: 1; }
 }
 
 .hero-veil {
