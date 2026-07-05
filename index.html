@@ -27,7 +27,7 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/fraunces/v38/6NU78FyLNQOQZAnv9bYEvDiIdE9Ea92uemAk_WBq8U_9v0c2Wa0KxC9TeP2Xz5c.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/jost/v20/92zatBhPNqw73oTd4jQmfxI.woff2">
   <link rel="preload" as="image" fetchpriority="high"
-        imagesrcset="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=480&q=65 480w, https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=800&q=65 800w, https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1080&q=65 1080w, https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1600&q=70 1600w"
+        imagesrcset="assets/img/hero-night-800.jpg 800w, assets/img/hero-night-1080.jpg 1080w, assets/img/hero-night-1600.jpg 1280w"
         imagesizes="100vw">
   <style>
 @font-face {
@@ -381,7 +381,7 @@ body.menu-open { overflow: hidden; }
 .hero-slides, .hero-slides img { position: absolute; inset: 0; width: 100%; height: 100%; }
 .hero-slide { object-fit: cover; opacity: 0; filter: saturate(.92) sepia(.08); }
 /* s1 starts visible so the full-bleed image is the LCP, not a late text repaint */
-.hero-slide.s1 { animation: heroCycleFirst 24s infinite; }
+.hero-slide.s1 { animation: heroCycleFirst 24s infinite; object-position: center 72%; }
 .hero-slide.s2 { animation: heroCycle 24s 8s infinite; }
 .hero-slide.s3 { animation: heroCycle 24s 16s infinite; }
 
@@ -467,6 +467,7 @@ body.menu-open { overflow: hidden; }
 
 /* ---------- Nº 01 address ---------- */
 .address { background: var(--ivory); }
+.address .split-media img { aspect-ratio: 4/3; }
 .stats { display: flex; flex-wrap: wrap; gap: 26px 44px; margin: 0; }
 .stats dt {
   font-family: var(--serif); font-weight: 540;
@@ -763,12 +764,12 @@ body.menu-open { overflow: hidden; }
     <!-- ======================= HERO ======================= -->
     <section class="hero" aria-label="Welcome">
       <div class="hero-slides" aria-hidden="true">
-        <img class="hero-slide s1" src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1080&q=65"
-             srcset="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=480&q=65 480w, https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=800&q=65 800w, https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1080&q=65 1080w, https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1600&q=70 1600w"
+        <img class="hero-slide s1" src="assets/img/hero-night-1080.jpg"
+             srcset="assets/img/hero-night-800.jpg 800w, assets/img/hero-night-1080.jpg 1080w, assets/img/hero-night-1600.jpg 1280w"
              sizes="100vw" alt="" fetchpriority="high" decoding="async">
         <!-- slides 2-3 load after window.load so they never compete with the LCP image -->
-        <img class="hero-slide s2" data-src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=1080&q=65" alt="" decoding="async">
-        <img class="hero-slide s3" data-src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1080&q=65" alt="" decoding="async">
+        <img class="hero-slide s2" data-src="assets/img/kesaria-interior.jpg" alt="" decoding="async">
+        <img class="hero-slide s3" data-src="assets/img/maya-hall-gold.jpg" alt="" decoding="async">
       </div>
       <div class="hero-veil" aria-hidden="true"></div>
       <div class="hero-content">
@@ -791,8 +792,8 @@ body.menu-open { overflow: hidden; }
     <section class="chapter address" id="address">
       <div class="wrap split">
         <figure class="split-media" data-reveal>
-          <img src="https://images.unsplash.com/photo-1561359313-0639aad49ca6?auto=format&fit=crop&w=1000&q=75" alt="Boats and ghats on the Ganga at golden hour" loading="lazy" decoding="async">
-          <figcaption>The Ganga, a short ride away</figcaption>
+          <img src="assets/img/ganga-setu.jpg" alt="Sunset over the Ganga at Vikramshila Setu, Bhagalpur" loading="lazy" decoding="async">
+          <figcaption>Sunset at Vikramshila Setu — minutes away</figcaption>
         </figure>
         <div class="split-copy">
           <p class="chapter-no" data-reveal>Nº 01 — The Address</p>
@@ -841,8 +842,8 @@ body.menu-open { overflow: hidden; }
             </div>
           </div>
           <figure class="split-media tall" data-reveal>
-            <img src="https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=1000&q=75" alt="Warmly lit rooftop bar in the evening" loading="lazy" decoding="async">
-            <figcaption>Rooftop, after sundown</figcaption>
+            <img src="assets/img/rooftop-night.jpg" alt="Chinmaye Inn rooftop at night, under string lights" loading="lazy" decoding="async">
+            <figcaption>Our rooftop, after sundown</figcaption>
           </figure>
         </div>
       </div>
@@ -859,9 +860,9 @@ body.menu-open { overflow: hidden; }
         </header>
 
         <div class="maya-gallery">
-          <figure class="maya-lead" data-reveal><img src="https://images.unsplash.com/photo-1610173826608-bd1f53a52db1?auto=format&fit=crop&w=1200&q=75" alt="Bride and groom at an Indian wedding ceremony" loading="lazy" decoding="async"></figure>
+          <figure class="maya-lead" data-reveal><img src="assets/img/maya-hall.jpg" alt="Maya banquet hall at Chinmaye Inn, set for a reception" loading="lazy" decoding="async"></figure>
           <figure data-reveal><img src="assets/img/px-8819338.jpg" alt="Marigold garlands for a wedding" loading="lazy" decoding="async"></figure>
-          <figure data-reveal><img src="assets/img/px-17057034.jpg" alt="Elegant banquet table setting" loading="lazy" decoding="async"></figure>
+          <figure data-reveal><img src="assets/img/maya-table.jpg" alt="Gold and red table setting at Maya" loading="lazy" decoding="async"></figure>
           <figure data-reveal><img src="assets/img/px-13156144.jpg" alt="Bride's hands with mehndi" loading="lazy" decoding="async"></figure>
         </div>
 
@@ -889,15 +890,15 @@ body.menu-open { overflow: hidden; }
         <div class="rooms">
           <article class="room-card" data-reveal>
             <figure class="room-media">
-              <img src="https://images.unsplash.com/photo-1592229505726-ca121723b8ef?auto=format&fit=crop&w=1000&q=75" alt="Deluxe Suite — palace-style bedroom in red and cream" loading="lazy" decoding="async">
+              <img src="assets/img/room-deluxe.jpg" alt="Deluxe Suite at Chinmaye Inn — king bed dressed with towel swans" loading="lazy" decoding="async">
             </figure>
             <div class="room-body">
               <div class="room-title"><h3>Deluxe Suite</h3><p class="room-rate">from <strong>₹4,999</strong><span>/night</span></p></div>
               <p class="room-desc">The big one. A sitting room, a king bed, and the good pillows.</p>
-              <p class="room-amenities">King bed · Sitting area · Rain shower · Breakfast for two</p>
+              <p class="room-amenities">King bed · Sitting lounge · Bathtub · Breakfast for two</p>
               <div class="room-thumbs" aria-hidden="true">
-                <img src="assets/img/px-11761084.jpg" alt="" loading="lazy" decoding="async">
-                <img src="assets/img/px-30455215.jpg" alt="" loading="lazy" decoding="async">
+                <img src="assets/img/suite-lounge.jpg" alt="" loading="lazy" decoding="async">
+                <img src="assets/img/suite-bath.jpg" alt="" loading="lazy" decoding="async">
               </div>
               <div class="room-actions">
                 <button class="btn btn-gold btn-small js-book" type="button" data-purpose="stay" data-room="Deluxe Suite">Book on WhatsApp</button>
@@ -908,15 +909,15 @@ body.menu-open { overflow: hidden; }
 
           <article class="room-card" data-reveal>
             <figure class="room-media">
-              <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=75" alt="Executive Room — classic bedroom in cream tones" loading="lazy" decoding="async">
+              <img src="assets/img/room-executive.jpg" alt="Executive Room at Chinmaye Inn — king bed with sitting corner" loading="lazy" decoding="async">
             </figure>
             <div class="room-body">
               <div class="room-title"><h3>Executive Room</h3><p class="room-rate">from <strong>₹3,999</strong><span>/night</span></p></div>
               <p class="room-desc">Calm and classic — made for long, easy stays.</p>
-              <p class="room-amenities">Queen bed · Work corner · Ganga-facing on request</p>
+              <p class="room-amenities">King bed · Sitting corner · Work desk</p>
               <div class="room-thumbs" aria-hidden="true">
-                <img src="assets/img/px-3884679.jpg" alt="" loading="lazy" decoding="async">
-                <img src="assets/img/px-7609139.jpg" alt="" loading="lazy" decoding="async">
+                <img src="assets/img/exec-desk.jpg" alt="" loading="lazy" decoding="async">
+                <img src="assets/img/exec-bed.jpg" alt="" loading="lazy" decoding="async">
               </div>
               <div class="room-actions">
                 <button class="btn btn-gold btn-small js-book" type="button" data-purpose="stay" data-room="Executive Room">Book on WhatsApp</button>
@@ -927,15 +928,15 @@ body.menu-open { overflow: hidden; }
 
           <article class="room-card" data-reveal>
             <figure class="room-media">
-              <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=75" alt="Business Class Room — warm wooden room with morning light" loading="lazy" decoding="async">
+              <img src="assets/img/room-business.jpg" alt="Business Class Room at Chinmaye Inn — bed by the window with work ledge" loading="lazy" decoding="async">
             </figure>
             <div class="room-body">
               <div class="room-title"><h3>Business Class</h3><p class="room-rate">from <strong>₹2,999</strong><span>/night</span></p></div>
               <p class="room-desc">Sharp and simple — desk, fast Wi-Fi, blackout sleep.</p>
               <p class="room-amenities">Double bed · Work desk · Early check-out breakfast pack</p>
               <div class="room-thumbs" aria-hidden="true">
-                <img src="assets/img/px-27101225.jpg" alt="" loading="lazy" decoding="async">
-                <img src="assets/img/px-10060865.jpg" alt="" loading="lazy" decoding="async">
+                <img src="assets/img/business-warm.jpg" alt="" loading="lazy" decoding="async">
+                <img src="assets/img/reception.jpg" alt="" loading="lazy" decoding="async">
               </div>
               <div class="room-actions">
                 <button class="btn btn-gold btn-small js-book" type="button" data-purpose="stay" data-room="Business Class Room">Book on WhatsApp</button>
@@ -994,7 +995,7 @@ body.menu-open { overflow: hidden; }
           <span><small>November — February</small>Wedding season at Maya</span>
         </a>
         <a class="season-card js-book-link" href="#" data-purpose="stay" data-room="Chhath stay">
-          <img src="https://images.unsplash.com/photo-1561359313-0639aad49ca6?auto=format&fit=crop&crop=bottom&w=800&h=1000&q=70" alt="Boats on the Ganga at the ghats" loading="lazy" decoding="async">
+          <img src="assets/img/chhath-barani-ghat.jpg" alt="Chhath morning arghya at Barani Ghat near Vikramshila Setu, Bhagalpur" loading="lazy" decoding="async">
           <span><small>Kartik month</small>Chhath on the Ganga</span>
         </a>
       </div>
@@ -1035,7 +1036,7 @@ body.menu-open { overflow: hidden; }
         <a href="#stay">Stay</a><a href="#kesaria">Kesaria</a><a href="#maya">Maya</a><a href="#contact">Contact</a>
       </nav>
       <p class="footer-line">RBSR Path, Khanjarpur, Bhagalpur · +91 88772 22233 · info@chinmaye.in</p>
-      <p class="footer-note">Website concept sample · crafted for Hotel Chinmaye Inn · photography placeholders pending the hotel’s own shoot</p>
+      <p class="footer-note">Website concept sample · photography courtesy Hotel Chinmaye Inn · Ganga imagery: Wikimedia Commons, CC BY-SA 4.0 (555prembhai420 · Vkumarv) · food imagery: stock placeholders</p>
     </div>
   </footer>
 
