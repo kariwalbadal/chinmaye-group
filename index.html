@@ -450,18 +450,19 @@ body.menu-open { overflow: hidden; }
 .split { display: grid; gap: clamp(28px, 5vw, 64px); align-items: center; }
 @media (min-width: 900px) { .split { grid-template-columns: 1fr 1fr; } }
 
-.split-media { margin: 0; position: relative; }
+.split-media { margin: 0; }
+.split-media .media-frame { position: relative; display: block; }
 .split-media img { width: 100%; aspect-ratio: 4/5; object-fit: cover; filter: saturate(.94) sepia(.08); }
 .split-media.tall img { aspect-ratio: 3/4; }
 .split-media figcaption {
-  margin-top: 10px; font-size: .72rem; letter-spacing: .26em; text-transform: uppercase; opacity: .6;
+  margin-top: 14px; font-size: .7rem; letter-spacing: .18em; text-transform: uppercase; opacity: .6;
 }
-/* gold hairline frame w/ corner diamond */
-.split-media::before {
+/* gold hairline frame w/ corner diamond — scoped to the image only */
+.split-media .media-frame::before {
   content: ""; position: absolute; inset: 14px; z-index: 1;
   border: 1px solid rgba(176, 141, 87, .55); pointer-events: none;
 }
-.split-media::after {
+.split-media .media-frame::after {
   content: ""; position: absolute; top: 10px; left: 10px; z-index: 1;
   width: 8px; height: 8px; background: var(--gold); transform: rotate(45deg);
 }
@@ -469,6 +470,7 @@ body.menu-open { overflow: hidden; }
 /* ---------- Nº 01 address ---------- */
 .address { background: var(--ivory); }
 .address .split-media img { aspect-ratio: 4/3; }
+.address .split-media figcaption { white-space: nowrap; }
 .stats { display: flex; flex-wrap: wrap; gap: 26px 44px; margin: 0; }
 .stats dt {
   font-family: var(--serif); font-weight: 540;
@@ -793,8 +795,8 @@ body.menu-open { overflow: hidden; }
     <section class="chapter address" id="address">
       <div class="wrap split">
         <figure class="split-media" data-reveal>
-          <img src="assets/img/ganga-setu.jpg" alt="Sunset over the Ganga at Vikramshila Setu, Bhagalpur" loading="lazy" decoding="async">
-          <figcaption>Sunset at Vikramshila Setu — minutes away</figcaption>
+          <span class="media-frame"><img src="assets/img/ganga-setu.jpg" alt="Sunset over the Ganga at Vikramshila Setu, Bhagalpur" loading="lazy" decoding="async"></span>
+          <figcaption>Vikramshila Setu, at sundown</figcaption>
         </figure>
         <div class="split-copy">
           <p class="chapter-no" data-reveal>Nº 01 — The Address</p>
@@ -843,7 +845,7 @@ body.menu-open { overflow: hidden; }
             </div>
           </div>
           <figure class="split-media tall" data-reveal>
-            <img src="assets/img/rooftop-night.jpg" alt="Chinmaye Inn rooftop at night, under string lights" loading="lazy" decoding="async">
+            <span class="media-frame"><img src="assets/img/rooftop-night.jpg" alt="Chinmaye Inn rooftop at night, under string lights" loading="lazy" decoding="async"></span>
             <figcaption>Our rooftop, after sundown</figcaption>
           </figure>
         </div>
@@ -996,7 +998,7 @@ body.menu-open { overflow: hidden; }
           <span><small>November — February</small>Wedding season at Maya</span>
         </a>
         <a class="season-card js-book-link" href="#" data-purpose="stay" data-room="Chhath stay">
-          <img src="assets/img/chhath-barani-ghat.jpg" alt="Chhath morning arghya at Barani Ghat near Vikramshila Setu, Bhagalpur" loading="lazy" decoding="async">
+          <img src="assets/img/ganga-ajgaivinath.jpg" alt="Ajgaivinath Temple rising from the Ganga at Sultanganj, Bhagalpur" loading="lazy" decoding="async">
           <span><small>Kartik month</small>Chhath on the Ganga</span>
         </a>
       </div>
@@ -1021,8 +1023,8 @@ body.menu-open { overflow: hidden; }
           </ul>
         </div>
         <div class="map-frame" data-reveal>
-          <iframe title="Map — Hotel Chinmaye Inn, Khanjarpur, Bhagalpur" src="https://www.google.com/maps?q=Hotel+Chinmaye+Inn,+Khanjarpur,+Bhagalpur,+Bihar+812001&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-          <a class="map-link" href="https://maps.google.com/?q=Hotel+Chinmaye+Inn,+Khanjarpur,+Bhagalpur,+Bihar+812001" rel="noopener">Open in Google Maps <span aria-hidden="true">→</span></a>
+          <iframe title="Map — Hotel Chinmaye Inn, Khanjarpur, Bhagalpur" src="https://www.google.com/maps/embed?origin=mfe&pb=!1m3!2m1!1s25.2562906,86.9955132!6i16" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          <a class="map-link" href="https://maps.app.goo.gl/Wm8hhCpK1s4CsVdu7" rel="noopener">Open in Google Maps <span aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
@@ -1037,7 +1039,7 @@ body.menu-open { overflow: hidden; }
         <a href="#stay">Stay</a><a href="#kesaria">Kesaria</a><a href="#maya">Maya</a><a href="#contact">Contact</a>
       </nav>
       <p class="footer-line">RBSR Path, Khanjarpur, Bhagalpur · +91 88772 22233 · info@chinmaye.in</p>
-      <p class="footer-note">Website concept sample · photography courtesy Hotel Chinmaye Inn · Ganga imagery: Wikimedia Commons, CC BY-SA 4.0 (555prembhai420 · Vkumarv) · food imagery: stock placeholders</p>
+      <p class="footer-note">Website concept sample · photography courtesy Hotel Chinmaye Inn · Ganga imagery: Wikimedia Commons, CC BY-SA 4.0 (555prembhai420 · Creativeminix) · food imagery: stock placeholders</p>
     </div>
   </footer>
 
