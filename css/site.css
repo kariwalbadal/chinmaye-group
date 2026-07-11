@@ -377,7 +377,9 @@ body.menu-open { overflow: hidden; }
 
 .hero-content {
   position: relative; z-index: 2;
-  padding: 0 var(--pad) clamp(84px, 16svh, 150px);
+  /* top clearance keeps tall hero stacks (property logos) out from
+     under the fixed header + ribbon */
+  padding: calc(var(--header-h) + 84px) var(--pad) clamp(84px, 16svh, 150px);
   max-width: var(--wrap); width: 100%; margin-inline: auto;
 }
 .hero-kicker {
@@ -748,3 +750,15 @@ body.menu-open { overflow: hidden; }
 
 /* booking: staah handoff note */
 .bm-secure { margin: 0; font-size: .74rem; letter-spacing: .06em; text-align: center; opacity: .65; max-width: none; }
+
+/* cross-navigation: "our other properties" on property pages */
+.properties.two { max-width: 900px; margin-inline: auto; }
+@media (min-width: 900px) { .properties.two { grid-template-columns: repeat(2, 1fr); } }
+.see-all { text-align: center; margin-top: clamp(24px, 4vw, 36px); }
+.see-all a {
+  font-size: .78rem; letter-spacing: .22em; text-transform: uppercase;
+  text-decoration: none; color: var(--wine); min-height: 44px;
+  display: inline-flex; align-items: center; gap: 10px;
+}
+.see-all a:hover { color: var(--gold); }
+.kesaria .see-all a { color: var(--gold-bright); }
