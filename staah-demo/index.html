@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Secure Booking — Chinmaye Hotels (STAAH demo placeholder)</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/png" sizes="64x64" href="../assets/favicon-64.png">
+  <link rel="stylesheet" href="../css/site.css">
+  <style>
+    .staah-wrap { min-height: 100svh; display: flex; align-items: center; justify-content: center; padding: 24px; background: var(--ivory); }
+    .staah-card { max-width: 520px; width: 100%; border: 1px solid var(--gold); background: #fff; padding: clamp(28px, 5vw, 44px); }
+    .staah-badge { display: inline-block; font-size: .64rem; letter-spacing: .28em; text-transform: uppercase; color: #fff; background: #0a7c66; padding: 7px 14px; margin-bottom: 18px; }
+    .staah-card h1 { font-size: clamp(1.5rem, 5vw, 2rem); }
+    .staah-rows { list-style: none; margin: 22px 0; padding: 0; }
+    .staah-rows li { display: flex; justify-content: space-between; gap: 14px; padding: 12px 2px; border-bottom: 1px solid rgba(176,141,87,.35); font-size: .95rem; }
+    .staah-rows li:first-child { border-top: 1px solid rgba(176,141,87,.35); }
+    .staah-rows b { font-weight: 500; }
+    .staah-note { font-size: .8rem; opacity: .65; }
+    .staah-note code { background: var(--ivory); padding: 2px 6px; }
+  </style>
+</head>
+<body>
+  <main class="staah-wrap">
+    <div class="staah-card">
+      <span class="staah-badge">Demo placeholder · secure booking</span>
+      <h1 id="prop-name">Chinmaye Hotels</h1>
+      <p style="margin:0;">This is where the <strong>STAAH booking engine</strong> will load — showing this hotel's name, live rates and room availability.</p>
+      <ul class="staah-rows">
+        <li><span>Property</span><b id="r-prop">—</b></li>
+        <li><span>Check-in</span><b id="r-in">—</b></li>
+        <li><span>Check-out</span><b id="r-out">—</b></li>
+        <li><span>Guests</span><b id="r-guests">—</b></li>
+      </ul>
+      <p class="staah-note">Wiring test successful — the website passed these details to the booking handoff. To go live, paste the property's STAAH link into <code>.env</code> and run the config script; this placeholder is then replaced by the real engine automatically.</p>
+      <p style="margin:18px 0 0;"><a href="../" style="font-size:.8rem; letter-spacing:.2em; text-transform:uppercase; color:var(--wine); text-decoration:none;">← Back to Chinmaye Hotels</a></p>
+    </div>
+  </main>
+  <script>
+    const q = new URLSearchParams(location.search);
+    const names = { inn: "Hotel Chinmaye Inn", grand: "The Chinmaye Grand", deoghar: "Chinmaye Deoghar" };
+    const prop = names[q.get("property")] || "Chinmaye Hotels";
+    document.getElementById("prop-name").textContent = prop;
+    document.getElementById("r-prop").textContent = prop;
+    document.getElementById("r-in").textContent = q.get("checkin") || "—";
+    document.getElementById("r-out").textContent = q.get("checkout") || "—";
+    document.getElementById("r-guests").textContent = q.get("adults") || "—";
+  </script>
+</body>
+</html>

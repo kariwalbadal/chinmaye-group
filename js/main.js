@@ -42,6 +42,13 @@ const BOOKING = {
   },
 };
 
+/* when STAAH is live for stays, room CTAs shouldn't promise WhatsApp */
+if (BOOKING.staahActive("stay")) {
+  document.querySelectorAll(".js-book").forEach((b) => {
+    if (/whatsapp/i.test(b.textContent)) b.textContent = "Book online";
+  });
+}
+
 /* ---------- header state ---------- */
 const header = document.querySelector(".site-header");
 if (header) {
