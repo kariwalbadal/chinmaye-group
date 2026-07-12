@@ -1,0 +1,18 @@
+# Chinmaye Hotels
+
+> A family of hotels, resorts and kitchens across Bihar & Jharkhand, India, built on one promise: "Mehmaan bhagwan hote hain" (guests are gods). Founded in Bhagalpur, the Silk City on the Ganga.
+
+## Properties
+1. Hotel Chinmaye Inn — Bhagalpur, Bihar. OPEN NOW. Rooms & suites, Kesaria rooftop restaurant, Maya banquet hall. https://kariwalbadal.github.io/chinmaye-inn/
+2. The Chinmaye Grand — Banquet & Resort at Sarvesh Royal Garden, Bhagalpur, Bihar. OPENING SOON. Garden weddings, conventions, resort stays. https://kariwalbadal.github.io/chinmaye-group/grand/
+3. Chinmaye Deoghar — near Baba Baidyanath Dham, Deoghar, Jharkhand. OPENING 2027. https://kariwalbadal.github.io/chinmaye-group/deoghar/
+
+## Contact (all properties)
+- Phone / WhatsApp: +91 88772 22233 (24-hour)
+- Email: info@chinmaye.in
+- Instagram: @chinmayeinn
+- HQ: RBSR Path, Khanjarpur, Bhagalpur, Bihar 812001, India (25.2562906, 86.9955132)
+
+## Booking
+- Hotel Chinmaye Inn takes online bookings and WhatsApp/phone bookings.
+- The Chinmaye Grand accepts event and date enquiries ahead of opening.

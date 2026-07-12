@@ -20,6 +20,9 @@
   <link rel="icon" type="image/png" sizes="64x64" href="../assets/favicon-64.png">
   <link rel="apple-touch-icon" href="../assets/favicon-180.png">
   <meta name="theme-color" content="#26222A">
+  <meta name="geo.region" content="IN-BR">
+  <meta name="geo.placename" content="Bhagalpur">
+  <meta property="og:locale" content="en_IN">
 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/fraunces/v38/6NU78FyLNQOQZAnv9bYEvDiIdE9Ea92uemAk_WBq8U_9v0c2Wa0KxC9TeP2Xz5c.woff2">
@@ -28,17 +31,46 @@
   <link rel="stylesheet" href="../css/site.css">
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Hotel",
-    "name": "The Chinmaye Grand",
-    "description": "Banquet & Resort at Sarvesh Royal Garden, Bhagalpur — opening soon.",
-    "telephone": "+918877222233",
-    "email": "info@chinmaye.in",
-    "url": "https://kariwalbadal.github.io/chinmaye-group/grand/",
-    "address": { "@type": "PostalAddress", "addressLocality": "Bhagalpur", "addressRegion": "Bihar", "addressCountry": "IN" },
-    "parentOrganization": { "@type": "Organization", "name": "Chinmaye Hotels" }
-  }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Hotel",
+      "name": "The Chinmaye Grand",
+      "description": "Banquet & Resort at Sarvesh Royal Garden, Bhagalpur — garden weddings, conventions and celebrations at grand scale. Opening soon.",
+      "url": "https://kariwalbadal.github.io/chinmaye-group/grand/",
+      "image": "https://kariwalbadal.github.io/chinmaye-group/assets/og-grand.jpg",
+      "telephone": "+918877222233",
+      "email": "info@chinmaye.in",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bhagalpur",
+        "addressRegion": "Bihar",
+        "addressCountry": "IN"
+      },
+      "parentOrganization": {
+        "@id": "https://kariwalbadal.github.io/chinmaye-group/#org"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Chinmaye Hotels",
+          "item": "https://kariwalbadal.github.io/chinmaye-group/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "The Chinmaye Grand",
+          "item": "https://kariwalbadal.github.io/chinmaye-group/grand/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 </head>
 <body>
