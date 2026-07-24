@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://kariwalbadal.github.io/chinmaye-group/sitemap.xml
-# AI assistants: structured summary at https://kariwalbadal.github.io/chinmaye-group/llms.txt
+Sitemap: https://chinmaye.sutrabox.com/sitemap.xml
+# AI assistants: structured summary at https://chinmaye.sutrabox.com/llms.txt
