@@ -20,7 +20,7 @@ const BOOKING = {
     const when = date ? ` for ${date}` : "";
     const who = guests ? `, ${guests} guest${guests > 1 ? "s" : ""}` : "";
     const sign = name ? ` — ${name}` : "";
-    return `Namaste ${CONFIG.name || "Chinmaye"}! I'd like to ${what}${when}${who}.${sign}`;
+    return `Hello ${CONFIG.name || "Chinmaye"}! I'd like to ${what}${when}${who}.${sign}`;
   },
   staahActive(purpose) {
     return purpose === "stay" && CONFIG.staahEnabled && CONFIG.staahUrl;

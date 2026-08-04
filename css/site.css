@@ -780,3 +780,15 @@ body.menu-open { overflow: hidden; }
 .hall h3 { margin: 0 0 6px; font-size: 1.3rem; color: var(--wine); }
 .hall-meta { margin: 0 0 10px; font-size: .68rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); }
 .hall-desc { margin: 0; font-size: .88rem; line-height: 1.55; }
+
+/* ---------- viewport-appropriate contact affordances ----------
+   A tel: link is dead weight on a laptop; desktop gets the site's own
+   enquiry form instead, phones keep tap-to-call. */
+.on-desktop { display: none; }
+@media (min-width: 900px) {
+  .on-mobile { display: none; }
+  .on-desktop { display: inline-flex; }
+  li.on-desktop { display: list-item; }
+  p.on-desktop { display: block; }
+}
+.header-call { color: inherit; white-space: nowrap; }
