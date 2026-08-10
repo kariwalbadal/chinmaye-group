@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://chinmaye.sutrabox.com/sitemap.xml
-# AI assistants: structured summary at https://chinmaye.sutrabox.com/llms.txt
+Sitemap: https://group.chinmaye.in/sitemap.xml
+# AI assistants: structured summary at https://group.chinmaye.in/llms.txt
