@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://group.chinmaye.in/</loc><lastmod>2026-07-12</lastmod><priority>1.0</priority></url>
-  <url><loc>https://group.chinmaye.in/grand/</loc><lastmod>2026-07-12</lastmod><priority>0.9</priority></url>
-  <url><loc>https://group.chinmaye.in/deoghar/</loc><lastmod>2026-07-12</lastmod><priority>0.7</priority></url>
-  <url><loc>https://chinmaye.in/</loc><lastmod>2026-07-12</lastmod><priority>0.9</priority></url>
+  <url><loc>https://chinmaye.in/</loc><lastmod>2026-07-12</lastmod><priority>1.0</priority></url>
+  <url><loc>https://grand.chinmaye.in/</loc><lastmod>2026-07-12</lastmod><priority>0.9</priority></url>
+  <url><loc>https://chinmaye.in/deoghar/</loc><lastmod>2026-07-12</lastmod><priority>0.7</priority></url>
+  <url><loc>https://inn.chinmaye.in/</loc><lastmod>2026-07-12</lastmod><priority>0.9</priority></url>
 </urlset>
