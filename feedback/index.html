@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guest feedback — The Chinmaye Grand</title>
+  <link rel="canonical" href="https://grand.chinmaye.in/feedback/">
+  <meta name="robots" content="noindex">
+  <!-- No-JS fallback. Loses ?v= and lands on the chooser, which is fine. -->
+  <meta http-equiv="refresh" content="0; url=https://grand.chinmaye.in/feedback/">
+</head>
+<body>
+  <p>Guest feedback has moved to <a href="https://grand.chinmaye.in/feedback/">grand.chinmaye.in/feedback</a>.</p>
+  <script>
+    /* Printed QR codes point at chinmaye.in/feedback?v=<service>. Carry the
+       service through so each QR still opens its own form. */
+    (function () {
+      var v = new URLSearchParams(location.search).get("v");
+      var ok = { restaurant: 1, rooms: 1, banquet: 1 };
+      location.replace("https://grand.chinmaye.in/feedback/" +
+        (v && ok[v] ? "?v=" + encodeURIComponent(v) : ""));
+    })();
+  </script>
+</body>
+</html>
